@@ -1,0 +1,23 @@
+{
+  "name": "soapbar-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy --minify index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@upstash/vector": "^1.1.5",
+    "csv-parser": "^3.0.0",
+    "hono": "^4.5.6",
+    "langchain": "^0.2.16"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "tsx": "^4.17.0",
+    "wrangler": "^3.72.0"
+  }
+}
