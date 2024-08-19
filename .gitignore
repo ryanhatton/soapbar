@@ -1,26 +1,22 @@
-
-
 .DS_Store
 
 # dependencies
-*/node_modules
-node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.js
 .yarn/install-state.gz
 
 # testing
-/coverage
+coverage/
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build/
 
 # misc
-.DS_Store
 *.pem
 
 # debug
@@ -41,6 +37,7 @@ next-env.d.ts
 
 *.toml
 
-
-
+# wrangler
 .wrangler
+
+

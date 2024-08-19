@@ -7,9 +7,8 @@ interface Row {
 }
 
 const index = new Index({
-  url: "https://hardy-tomcat-15274-us1-vector.upstash.io",
-  token:
-    "ABYFMGhhcmR5LXRvbWNhdC0xNTI3NC11czFhZG1pbll6QmhaVEEyTkRFdFl6TXhNQzAwTjJOaExXRmpOVEF0T0RFeFpXTTRaamd5TURSbQ==",
+  url: process.env.VECTOR_URL,
+  token: process.env.VECTOR_TOKEN,
 });
 
 // Parse CSV file and turn into array
