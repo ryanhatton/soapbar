@@ -33,7 +33,7 @@ const Demo = () => {
               POST
             </span>
             <div className='h-[20px] w-px bg-zinc-300' />
-            <p className='break-all'>https://vector.profanity.dev</p>
+            <p className='break-all'>https://profanity-api.ryanhattonmain.workers.dev</p>
           </div>
         </div>
         <div className='relative flex flex-col sm:flex-row items-center gap-2 mt-6 h-full sm:h-9'>
@@ -61,16 +61,16 @@ const Demo = () => {
               <p className='font-bold'>
                 {successData.score > 0.95 ? (
                   <span>
-                    🚨🚨😱😱 OH GOD, VERY BIG PROFANITY DETECTED!! 🚨🚨😱😱{' '}
+                    🚨🚨 WOAH! HOLD IT RIGHT THERE! ✋🙊 PROFANITY ALERT!! 🚨🚨{' '}
                   </span>
                 ) : successData.score > 0.9 ? (
-                  <span>🚨😱 BIG PROFANITY DETECTED!! 🚨😱 </span>
+                  <span>🚨 YIKES! PROFANITY DETECTED!! 🚨 </span>
                 ) : successData.score > 0.88 ? (
-                  <span>🚨 PROFANITY DETECTED!! 🚨 </span>
+                  <span>🚨 HOLY COW! PROFANITY DETECTED!! 🚨 </span>
                 ) : successData.score >= 0.85 ? (
-                  <span>😱 PRETTY SURE THIS IS A PROFANITY 😱</span>
+                  <span>😱 UH OH... THIS APPEARS TO BE A PROFANITY 😱</span>
                 ) : successData.score < 0.85 ? (
-                  <span>Crispy clean input, no profanities :)) 👍👍</span>
+                  <span>🧼 HOORAY! CLEAN INPUT! 🧼</span>
                 ) : null}
               </p>
 

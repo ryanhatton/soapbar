@@ -3,7 +3,7 @@
 import Code from "./Code";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
-const codeBlock = `const res = await fetch('https://vector.soapbar.dev', {
+const codeBlock = `const res = await fetch('https://profanity-api.ryanhattonmain.workers.dev/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ message }),

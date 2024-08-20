@@ -17,11 +17,11 @@ const Navbar = () => {
           <div className='hidden sm:block invisible'>SoapbarAPI</div>
 
           <div className='hidden sm:flex items-center gap-6'>
-            <Link className='hover:underline' href='#video-demo'>
+         {/*    <Link className='hover:underline' href='#video-demo'>
               Video Demo
-            </Link>
+            </Link> */}
             <Link className='hover:underline' href='#api'>
-              API
+              API Snippet
             </Link>
           </div>
 
