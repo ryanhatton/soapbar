@@ -26,8 +26,8 @@ export default async function Home() {
                 Detecting toxic content has always been{" "}
                 <span className="font-bold text-teal-500">slow</span> and{" "}
                 <span className="font-bold text-teal-500">expensive</span>. Not
-                anymore. Introducing a fast, free profanity
-                filter for your web apps.
+                anymore. Introducing a fast, free profanity filter for your web
+                apps.
               </p>
 
               <ul className="mt-8 space-y-2 font-medium flex flex-col items-center sm:items-start">
@@ -38,7 +38,7 @@ export default async function Home() {
                   </li>
                   <li className="flex gap-1.5 items-center">
                     <Check className="h-5 w-5 shrink-0 text-teal-500" />{" "}
-                    Customizable filter - (threshold or boolean)
+                    Customizable filtering options
                   </li>
                   <li className="flex gap-1.5 items-center">
                     <Check className="h-5 w-5 shrink-0 text-teal-500" /> 100%
@@ -114,7 +114,7 @@ export default async function Home() {
           <div className="w-full flex flex-col">
             <div className="flex justify-center text-center">
               <h2 className="font-heading text-5xl lg:text-6xl font-bold leading-tight text-balance sm:leading-none tracking-tight">
-               This API{" "}
+                This API{" "}
                 <span className="bg-red-500 text-white px-3">f@#k!ng</span>{" "}
                 cares
               </h2>
@@ -126,12 +126,13 @@ export default async function Home() {
               </span>{" "}
               If you run a web app with any kind of user generated content, it's
               your responsibility to keep things in order. That's a challenge if
-              your users use words that would make your sweet grandma gasp in surprise...
+              your users use words that would make your sweet grandma gasp in
+              surprise...
             </p>
 
             <Icons.arrow className="h-60 -mt-4 text-zinc-400 fill-zinc-400 pointer-events-none select-none" />
 
-          {/*   <p className="mt-6 sm:mt-12 z-10 text-center mx-auto text-3xl font-semibold">
+            {/*   <p className="mt-6 sm:mt-12 z-10 text-center mx-auto text-3xl font-semibold">
               Profanity on your website...
             </p>
 
@@ -176,8 +177,6 @@ export default async function Home() {
                 </p>
               </div>
             </div> */}
-
-
           </div>
         </div>
       </section>
@@ -190,12 +189,10 @@ export default async function Home() {
           </h2>
 
           <p className="text-center mx-auto mt-12 text-lg max-w-xl text-balance">
-            <span className="font-semibold">
-              Automate the dirty work!
-            </span>{" "}
-            Have SoapbarAPI keep your user input squeaky clean.
+            <span className="font-semibold">Automate the dirty work!</span> Have
+            SoapbarAPI keep your user input squeaky clean.
           </p>
-{/* 
+          {/* 
           <div className="relative mx-4 rounded-xl aspect-video md:mx-auto max-w-4xl mt-12 bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl lg:p-4">
             <YoutubePlayer />
             <div

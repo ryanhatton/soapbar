@@ -33,7 +33,7 @@ const Demo = () => {
               POST
             </span>
             <div className='h-[20px] w-px bg-zinc-300' />
-            <p className='break-all'>https://profanity-api.ryanhattonmain.workers.dev</p>
+            <p className='break-all'>https://soapbar.ryanhattonmain.workers.dev</p>
           </div>
         </div>
         <div className='relative flex flex-col sm:flex-row items-center gap-2 mt-6 h-full sm:h-9'>
