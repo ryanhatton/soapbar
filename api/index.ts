@@ -3,6 +3,16 @@ import { cors } from "hono/cors";
 import { env } from "hono/adapter";
 import { Index } from "@upstash/vector";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { Redis } from "@upstash/redis/cloudflare";
+
+const app = new Hono();
+
+type Environment = {
+  VECTOR_URL: string;
+  VECTOR_TOKEN: string;
+  UPSTASH_REDIS_URL: string;
+  UPSTASH_REDIS_TOKEN: string;
+};
 
 const semanticSplitter = new RecursiveCharacterTextSplitter({
   chunkSize: 25,
@@ -10,19 +20,47 @@ const semanticSplitter = new RecursiveCharacterTextSplitter({
   chunkOverlap: 12,
 });
 
-const app = new Hono();
-
-type Environment = {
-  VECTOR_URL: string;
-  VECTOR_TOKEN: string;
-};
-
 app.use(cors());
+
+// Rate limiting configuration
+const RATE_LIMIT_WINDOW = 60; // Time window in seconds
+const MAX_REQUESTS = 100; // Max requests per IP in the window
 
 const WHITELIST = ["swear"];
 const PROFANITY_THRESHOLD = 0.86;
 
-app.post("/", async (c) => {
+// Rate limiting middleware
+async function rateLimiter(c: any, next: any) {
+  const { UPSTASH_REDIS_URL, UPSTASH_REDIS_TOKEN } = env<Environment>(c);
+
+  const redis = new Redis({
+    url: UPSTASH_REDIS_URL,
+    token: UPSTASH_REDIS_TOKEN,
+  });
+
+  const ip = c.req.header("CF-Connecting-IP");
+
+  if (!ip) {
+    return c.json(
+      { error: "IP address is required for rate limiting." },
+      { status: 400 }
+    );
+  }
+
+  const currentCount = await redis.incr(ip);
+  
+  if (currentCount === 1) {
+    await redis.expire(ip, RATE_LIMIT_WINDOW);
+  }
+
+  if (currentCount > MAX_REQUESTS) {
+    return c.json({ error: "Rate limit exceeded." }, { status: 429 });
+  }
+
+  await next();
+}
+
+app.post("/", rateLimiter, async (c) => {
   if (c.req.header("Content-Type") !== "application/json") {
     return c.json({ error: "JSON body expected" }, { status: 406 });
   }
@@ -36,7 +74,6 @@ app.post("/", async (c) => {
       cache: false,
     });
 
-    //input validation
     const body = await c.req.json();
     let { message } = body as { message: string };
 
@@ -53,7 +90,6 @@ app.post("/", async (c) => {
       );
     }
 
-    // filter out whitelisted words
     message = message
       .split(/\s/)
       .filter((word) => !WHITELIST.includes(word.toLowerCase()))
@@ -144,5 +180,4 @@ async function splitTextIntoSemantics(text: string) {
   return chunks;
 }
 
-
-export default app
+export default app;
