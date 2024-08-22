@@ -53,27 +53,37 @@ export default async function Home() {
                   <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                    alt="Image Description"
+                    alt="Profile picture"
+                    width={80}
+                    height={80}
                   />
                   <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                    alt="Image Description"
+                    alt="Profile picture"
+                    width={80}
+                    height={80}
                   />
                   <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80"
-                    alt="Image Description"
+                    alt="Profile picture"
+                    width={80}
+                    height={80}
                   />
                   <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="/other-random-dude.jpg"
-                    alt="Image Description"
+                    alt="Profile picture"
+                    width={80}
+                    height={80}
                   />
                   <Image
                     className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="/random-stock-photo.jpg"
-                    alt="Image Description"
+                    alt="Profile picture"
+                    width={80}
+                    height={80}
                   />
                 </div>
 
@@ -103,6 +113,8 @@ export default async function Home() {
               aria-hidden="true"
               src="/try-it.png"
               className="absolute w-40 left-2/3 -top-2 select-none hidden sm:block"
+              width={160}
+              height={160}
             />
             <Demo />
           </div>
@@ -125,8 +137,8 @@ export default async function Home() {
               <span className="font-semibold">
                 Moderating profanity is a thankless, dirty job.
               </span>{" "}
-              If you run a web app with any kind of user generated content, it's
-              your responsibility to keep things in order. That's a challenge if
+              If you run a web app with any kind of user generated content, it&apos;s
+              your responsibility to keep things in order. That&apos;s a challenge if
               your users use words that would make your sweet grandma gasp in
               surprise...
             </p>
@@ -185,7 +197,7 @@ export default async function Home() {
       <section id="video-demo" className="bg-blue-50 grainy-light">
         <div className="mx-auto max-w-6xl gap-6 pb-24 pt-10 sm:pb-32 lg:gap-x-8 lg:px-8 lg:py-40">
           <h2 className="mx-auto text-balance text-5xl sm:text-6xl text-center font-bold leading-[4.25rem] tracking-tight max-w-2xl text-slate-900">
-            Let's <span className="px-2 bg-teal-500 text-white">clean</span>{" "}
+            Let&apos;s <span className="px-2 bg-teal-500 text-white">clean</span>{" "}
             things up
           </h2>
 
