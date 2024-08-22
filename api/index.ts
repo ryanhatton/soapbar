@@ -48,7 +48,7 @@ async function rateLimiter(c: any, next: any) {
   }
 
   const currentCount = await redis.incr(ip);
-  
+
   if (currentCount === 1) {
     await redis.expire(ip, RATE_LIMIT_WINDOW);
   }

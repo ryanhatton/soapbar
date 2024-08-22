@@ -20,7 +20,7 @@ export default async function Home() {
                   "relative tracking-tight sm:text-left mt-10 font-bold !leading-[4rem] text-gray-900 text-5xl md:text-7xl"
                 )}
               >
-                <span className="whitespace-nowrap">SoapbarAPI 🧼</span>
+                <span className="whitespace-nowrap">SoapBar API</span>
               </h1>
               <p className="mt-8 text-lg lg:pr-10 text-center lg:text-left text-balance md:text-wrap">
                 Detecting toxic content has always been{" "}
@@ -130,7 +130,7 @@ export default async function Home() {
               surprise...
             </p>
 
-            <Icons.arrow className="h-60 -mt-4 text-zinc-400 fill-zinc-400 pointer-events-none select-none" />
+            <Icons.arrow className="hidden md:block h-80 -mt-4 lg:-mb-64  text-zinc-400 fill-zinc-400 pointer-events-none select-none" />
 
             {/*   <p className="mt-6 sm:mt-12 z-10 text-center mx-auto text-3xl font-semibold">
               Profanity on your website...

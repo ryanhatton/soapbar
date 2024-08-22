@@ -1,6 +1,6 @@
 import { Heart } from 'lucide-react'
 import Link from 'next/link'
-import { buttonVariants } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 
 const Navbar = () => {
   return (
@@ -9,8 +9,8 @@ const Navbar = () => {
         <div className='relative flex h-14 items-center justify-between'>
           <Link
             href='/'
-            className='relative sm:absolute inset-y-0 left-0 flex items-center font-semibold text-teal-500'>
-           SoapbarAPI
+            className='relative tracking-tight sm:absolute inset-y-0 left-0 flex items-center font-bold text-teal-500'>
+           🧼 SoapBar
           </Link>
 
           {/* placeholder */}
@@ -21,17 +21,17 @@ const Navbar = () => {
               Video Demo
             </Link> */}
             <Link className='hover:underline' href='#api'>
-              API Snippet
+              Get Started
             </Link>
           </div>
 
-          <Link
-            href='https://github.com/joschan21/profanity.dev'
+        {/*   <Link
+            href='https://github.com/ryanhatton'
             target='_blank'
             referrerPolicy='no-referrer'
             className={buttonVariants({ variant: 'secondary' })}>
             Star on GitHub <Heart className='h-4 w-4 ml-1.5 fill-primary' />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

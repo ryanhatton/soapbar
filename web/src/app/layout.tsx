@@ -9,7 +9,7 @@ import './globals.css'
 const recursive = Recursive({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SoapBar.dev | A Fast, Profanity filter API',
+  title: 'SoapBar | A Fast, Profanity filter API',
   description: 'Where Bad Words Get the Suds',
 }
 
