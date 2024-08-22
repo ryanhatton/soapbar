@@ -6,6 +6,7 @@ import { redis } from "@/lib/redis";
 import { cn } from "@/lib/utils";
 import { Check, Star } from "lucide-react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 export default async function Home() {
   const requests = await redis.get("served-requests");
@@ -49,27 +50,27 @@ export default async function Home() {
 
               <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <div className="flex -space-x-4">
-                  <img
+                  <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
                     alt="Image Description"
                   />
-                  <img
+                  <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
                     alt="Image Description"
                   />
-                  <img
+                  <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80"
                     alt="Image Description"
                   />
-                  <img
+                  <Image
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="/other-random-dude.jpg"
                     alt="Image Description"
                   />
-                  <img
+                  <Image
                     className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-blue-50 dark:ring-gray-800"
                     src="/random-stock-photo.jpg"
                     alt="Image Description"
@@ -97,7 +98,7 @@ export default async function Home() {
           </div>
 
           <div className="relative px-8 sm:px-16 md:px-0 mt-28 md:mx-auto md:max-w-xl w-full lg:mx-0 lg:mt-20">
-            <img
+            <Image
               alt="try-it"
               aria-hidden="true"
               src="/try-it.png"
@@ -140,7 +141,7 @@ export default async function Home() {
               <div className="relative z-10">
                 <div className="absolute -z-10 left-1/2 -translate-x-1/2 -top-[90px]">
                   <div className="absolute inset-x-0 -bottom-0 h-16 bg-gradient-to-t 0 from-blue-100 pointer-events-none"></div>
-                  <img
+                  <Image
                     alt="shocked-emoji"
                     src="/shocked-emoji.png"
                     className="h-24 relative -z-10 select-none"
@@ -159,7 +160,7 @@ export default async function Home() {
               <div className="relative z-10">
                 <div className="absolute -z-10 left-1/2 -translate-x-1/2 -top-[90px]">
                   <div className="absolute inset-x-0 -bottom-0 h-16 bg-gradient-to-t from-blue-100 pointer-events-none"></div>
-                  <img
+                  <Image
                     alt="swear-emoji"
                     src="/swear-emoji.png"
                     className="relative -z-10 h-24 select-none"
@@ -199,7 +200,7 @@ export default async function Home() {
               aria-hidden="true"
               className="absolute -left-52 top-1/4 z-10 select-none"
             >
-              <img alt="3-min-demo" src="/3mindemo.png" />
+              <Image alt="3-min-demo" src="/3mindemo.png" />
             </div>
           </div> */}
 
