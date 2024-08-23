@@ -11,6 +11,17 @@ const recursive = Recursive({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'SoapBar | A Fast, Profanity filter API',
   description: 'Where Bad Words Get the Suds',
+  metadataBase: new URL('https://soapbar.dev'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'de-DE': '/de-DE',
+    },
+  },
+  openGraph: {
+    images: '/og-image.png',
+  },
 }
 
 export const viewport: Viewport = {
